@@ -1,19 +1,274 @@
 ---
 import "../styles/global.css";
+import { Github, Linkedin, Mail, MapPin, Phone } from "@lucide/astro";
+
+type JobType = {
+	job_title: string;
+	description: string[];
+	start_time: string;
+	end_time: string;
+	location: string;
+	company_name: string;
+};
+
+type EducationType = {
+	degree: string;
+	institution: string;
+	location: string;
+	start_time: string;
+	end_time: string;
+};
+
+type ProjectType = {
+	name: string;
+	description: string;
+	technologies: string[];
+	link?: string;
+};
+
+const jobs: JobType[] = [
+  {
+    job_title: "Open-Source Developer",
+    description: [
+      "Develop and maintain Wathqny — a blazing-fast documentation site generator with markdown support and an exceptional developer experience; optimized to deliver page loads in under 200 ms.",
+      "Created and maintain FruitUI — a modular, lightweight CSS framework that allows developers to include only the components they need, offering a highly customizable alternative to bulky systems like Bootstrap.",
+      "Contributed to Gentleduck UI (Duck) — a modern React component library offering scalable primitives and high-performance components.",
+      "Optimized roadmap.sh, improving Lighthouse Performance Score from 83 → 99 (+16), reducing LCP by 1.4 s, FCP by 0.7 s, and achieving a perfect CLS of 0.00.",
+      "Collaborate with open-source communities such as Astro and Monkeytype — improving performance, accessibility, and developer tooling across multiple ecosystems.",
+      "Continuously refine build pipelines, rendering performance, and developer experience across several open-source projects."
+    ],
+    start_time: "09/2023",
+    end_time: "Present",
+    location: "Remote",
+    company_name: "Open Source (Self-Employed)"
+  },
+  {
+    job_title: "Software Engineer",
+    description: [
+      "Reduced memory usage from 16 GB to 700 MB (~23× improvement), significantly enhancing system performance.",
+      "Accelerated developer environment load time from 3–5 minutes to ~10 seconds, greatly improving productivity.",
+      "Developed internal tools and implemented system-level optimizations to streamline development workflows."
+    ],
+    start_time: "01/2025",
+    end_time: "07/2025",
+    location: "Remote",
+    company_name: "Gentleduck"
+  },
+  {
+    job_title: "Junior Frontend Developer",
+    description: [
+      "Developed React-based dashboards and interfaces, improving usability and engagement.",
+      "Integrated REST APIs to support dynamic data handling and real-time updates.",
+      "Built reusable components tailored to project requirements while maintaining design consistency.",
+      "Optimized load times and overall app performance using best practices and tooling.",
+      "Collaborated on multiple systems totaling 2,000+ users, delivering scalable, maintainable solutions.",
+      "Handled the full development cycle — from initial setup to deployment and maintenance.",
+      "Provided ongoing freelance support and iterative improvements after the main development phase."
+    ],
+    start_time: "09/2023",
+    end_time: "02/2024",
+    location: "Remote / Iraq",
+    company_name: "Native Code IQ"
+  }
+];
+
+const projects: ProjectType[] = [
+  {
+    name: "Wathqny",
+    description: "A blazing-fast documentation site generator optimized for instant navigation and sub-200 ms page loads, featuring markdown support, instant rebuilds, and a developer-first experience.",
+    technologies: ["Astro", "TypeScript", "Vite"]
+  },
+  {
+    name: "FruitUI",
+    description: "A modular, lightweight CSS framework that lets developers include only the parts they need — from grids to navbars — providing a customizable, performance-focused alternative to Bootstrap.",
+    technologies: ["Vanilla CSS", "SASS", "TypeScript"]
+  },
+  {
+    name: "Gentleduck UI (Duck)",
+    description: "A modern, high-performance React component library — part of the Gentleduck suite — offering scalable primitives and flexible components built for speed, accessibility, and developer experience.",
+    technologies: ["React", "TypeScript", "CSS"]
+  }
+];
+
+const skills = {
+	"Frontend Development": [
+		"React",
+		"Next.js",
+		"TypeScript",
+		"JavaScript (ES6+)",
+		"HTML5",
+		"CSS3",
+		"Astro"
+	],
+	"Backend & APIs": ["Node.js", "Nest.js", "PostgreSQL"],
+	"State Management": ["Redux", "Redux Toolkit", "Context API"],
+	"Styling": ["Tailwind CSS", "SASS", "CSS Modules", "Styled Components"],
+	"Tools & Others": ["Git", "Vite", "Webpack", "REST APIs", "Web Accessibility", "Performance Optimization"]
+};
+
+const education: EducationType[] = [
+	{
+		degree: "Associate's Degree in Management Information Systems",
+		institution: "Luxor Institute of Technology",
+		location: "Egypt",
+		start_time: "—",
+		end_time: "—",
+	},
+];
 ---
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="preload" fetchpriority="high" rel="icon" type="image/jpg" href="/favicon.jpg" />
+		<link rel="icon" type="image/jpg" href="/favicon.jpg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content="this is my portfolio" />
-		<title>felfel</title>
+		<meta name="description" content="Abdelrahman Abdelfattah - UI Engineer Portfolio & CV" />
+		<title>Abdelrahman Abdelfattah - CV</title>
+
 	</head>
-	<body>
-		<h1 class="text-lg">felfel Abdulla</h1>
-		<!-- <a href="https://www.linkedin.com/in/abdo-spices/"
-			><h2>software engineer</h2></a
-		> -->
-			
+	<body class="bg-white print:text-[11pt] print:m-0 print:p-0">
+		<div class="container mx-auto px-4 sm:px-8 py-6 sm:py-10 max-w-5xl print:max-w-full print:px-12 print:py-12">
+			<!-- Header -->
+			<header class="mb-4 sm:mb-6 print:mb-3 break-inside-avoid">
+				<h1 class="text-3xl sm:text-4xl md:text-5xl uppercase font-bold text-center mb-3 sm:mb-4 print:text-2xl print:mb-2">
+					Abdelrahman Abdelfattah
+				</h1>
+				<div class="flex flex-wrap gap-3 sm:gap-4 justify-center text-gray-700 text-xs sm:text-sm print:gap-2 print:text-black max-sm:flex-col max-sm:items-center">
+					<a href="mailto:spices.digital@gmail.com" class="flex gap-1 items-center hover:text-gray-900 print:no-underline">
+						<Mail size={16} />
+						<span>spices.digital@gmail.com</span>
+					</a>
+					<span class="flex gap-1 items-center">
+						<Phone size={16} />
+						<span>(+20) 01212519816</span>
+					</span>
+					<span class="flex gap-1 items-center">
+						<MapPin size={16} />
+						<span>Qena, Egypt</span>
+					</span>
+					<a class="flex gap-1 items-center hover:text-gray-900 print:no-underline" href="https://www.linkedin.com/in/abdo-spices/" target="_blank" rel="noopener noreferrer">
+						<Linkedin size={16} />
+						<span>abdo-spices</span>
+					</a>
+					<a class="flex gap-1 items-center hover:text-gray-900 print:no-underline" href="https://www.github.com/abdo-spices/" target="_blank" rel="noopener noreferrer">
+						<Github size={16} />
+						<span>abdo-spices</span>
+					</a>
+				</div>
+			</header>
+
+			<!-- Summary -->
+			<section class="mb-3 sm:mb-4 print:mb-3 break-inside-avoid">
+				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+					Professional Summary
+				</h2>
+				<p class="text-gray-700 leading-relaxed text-sm sm:text-base print:text-[11pt] print:leading-snug">
+					Front-End Software Engineer with a strong focus on building fast, accessible, and SEO-optimized web experiences. 
+					Experienced in React, Next.js, and Astro with a passion for UI/UX design and performance engineering. 
+					Actively contributing to the open-source community through projects like Wathqny, Fruit UI, and contributions to Astro and roadmap.sh. 
+					Dedicated to crafting efficient, maintainable, and user-centered interfaces that scale.
+				</p>
+			</section>
+
+			<!-- Experience -->
+			<section class="mb-3 sm:mb-4 print:mb-3">
+				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+					Professional Experience
+				</h2>
+				<div class="space-y-3 sm:space-y-4 print:space-y-2">
+					{
+						jobs.map((job: JobType) => (
+							<div class="break-inside-avoid">
+								<div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 print:mb-1 max-sm:space-y-1">
+									<div>
+										<h3 class="text-base sm:text-lg font-semibold capitalize print:text-sm break-after-avoid">{job.job_title}</h3>
+										<div class="text-xs sm:text-sm text-gray-600 print:text-[10pt]">
+											<span class="font-medium">{job.company_name}</span>
+											<span class="mx-1">•</span>
+											<span>{job.location}</span>
+										</div>
+									</div>
+									<div class="text-xs sm:text-sm text-gray-600 sm:text-right print:text-[10pt]">
+										<span>{job.start_time}</span>
+										<span class="mx-1">-</span>
+										<span>{job.end_time}</span>
+									</div>
+								</div>
+								<ul class="list-disc list-outside space-y-0.5 text-gray-700 text-xs sm:text-sm ml-5 sm:ml-6 print:text-[10pt] print:leading-snug print:space-y-0">
+									{job.description.map((item) => (
+										<li class="print:mb-0.5">{item}</li>
+									))}
+								</ul>
+							</div>
+						))
+					}
+				</div>
+			</section>
+
+			<!-- Skills -->
+			<section class="mb-3 sm:mb-4 print:mb-3 break-inside-avoid">
+				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+					Technical Skills
+				</h2>
+				<div class="grid gap-1.5 sm:gap-2 print:gap-1">
+					{
+						Object.entries(skills).map(([category, skillList]) => (
+							<div class="flex flex-col sm:flex-row gap-1 sm:gap-2">
+								<span class="font-medium text-gray-800 text-xs sm:text-sm min-w-fit print:text-[10pt]">{category}:</span>
+								<span class="text-gray-700 text-xs sm:text-sm print:text-[10pt]">{skillList.join(", ")}</span>
+							</div>
+						))
+					}
+				</div>
+			</section>
+
+			<!-- Projects -->
+			<section class="mb-3 sm:mb-4 print:mb-3 break-inside-avoid">
+				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+					Projects
+				</h2>
+				<div class="space-y-2 sm:space-y-3 print:space-y-2">
+					{
+						projects.map((project: ProjectType) => (
+							<div class="break-inside-avoid">
+								<h3 class="font-semibold text-gray-800 text-sm sm:text-base print:text-[11pt]">{project.name}</h3>
+								<p class="text-xs sm:text-sm text-gray-700 mb-1 print:text-[10pt] print:leading-snug">{project.description}</p>
+								<div class="flex gap-1.5 sm:gap-2 flex-wrap print:gap-1">
+									{project.technologies.map((tech) => (
+										<span class="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 sm:py-1 rounded print:text-[9pt] print:py-0.5">
+											{tech}
+										</span>
+									))}
+								</div>
+							</div>
+						))
+					}
+				</div>
+			</section>
+
+			<!-- Education -->
+			<section class="break-inside-avoid">
+				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+					Education
+				</h2>
+				{
+					education.map((edu: EducationType) => (
+						<div class="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+							<div>
+								<h3 class="font-semibold text-gray-800 text-sm sm:text-base print:text-[11pt]">{edu.degree}</h3>
+								<p class="text-xs sm:text-sm text-gray-600 print:text-[10pt]">
+									{edu.institution} • {edu.location}
+								</p>
+							</div>
+							<div class="text-xs sm:text-sm text-gray-600 mt-1 sm:mt-0 print:text-[10pt]">
+								<span>{edu.start_time}</span>
+								<span class="mx-1">-</span>
+								<span>{edu.end_time}</span>
+							</div>
+						</div>
+					))
+				}
+			</section>
+		</div>
 	</body>
 </html>
