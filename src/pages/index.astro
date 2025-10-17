@@ -26,6 +26,39 @@ type ProjectType = {
 	link?: string;
 };
 
+type ContactType = {
+	email: string;
+	phone: string;
+	location: string;
+	linkedin: string;
+	github: string;
+};
+
+type ProfileType = {
+	name: string;
+	summary: string;
+};
+
+type SkillsType = {
+	technical: {
+		[category: string]: string[];
+	};
+	soft: string[];
+};
+
+const profile: ProfileType = {
+	name: "Abdelrahman Abdelfattah",
+	summary: "Full-Stack Software Engineer with a strong focus on building fast, accessible, and SEO-optimized web experiences. Experienced in React, Next.js, and Astro with a passion for UI/UX design and performance engineering. Actively contributing to the open-source community through projects like Wathqny, Fruit UI, and contributions to Astro and roadmap.sh. Dedicated to crafting efficient, maintainable, and user-centered interfaces that scale."
+};
+
+const contact: ContactType = {
+	email: "spices.digital@gmail.com",
+	phone: "(+20) 01212519816",
+	location: "Qena, Egypt",
+	linkedin: "linkedin.com/in/abdo-spices",
+	github: "github.com/abdo-spices"
+};
+
 const jobs: JobType[] = [
   {
     job_title: "Software Engineer",
@@ -89,20 +122,29 @@ const projects: ProjectType[] = [
   }
 ];
 
-const skills = {
-	"Frontend Development": [
-		"React",
-		"Next.js",
-		"TypeScript",
-		"JavaScript (ES6+)",
-		"HTML5",
-		"CSS3",
-		"Astro"
-	],
-	"Backend & APIs": ["Node.js", "Nest.js", "PostgreSQL"],
-	"State Management": ["Redux", "Redux Toolkit", "Context API"],
-	"Styling": ["Tailwind CSS", "SASS", "CSS Modules", "Styled Components"],
-	"Tools & Others": ["Git", "Vite", "Webpack", "REST APIs", "web accessibility", "performance optimization","SEO optimization"]
+const skills: SkillsType = {
+	technical: {
+		"Frontend": [
+			"React",
+			"Next.js",
+			"TypeScript",
+			"JavaScript (ES6+)",
+			"HTML",
+			"CSS",
+			"Astro"
+		],
+		"Backend": ["Node.js", "Nest.js", "PostgreSQL"],
+		"Tools & Others": ["Git", "Vite", "Webpack", "REST APIs","CI/CD", "web accessibility", "performance optimization","SEO optimization"]
+	},
+	soft: [
+		"Problem Solving",
+		"Communication",
+		"Team Collaboration",
+		"Attention to Detail",
+		"Time Management",
+		"Adaptability",
+		"Self-Motivated"
+	]
 };
 
 const education: EducationType[] = [
@@ -111,7 +153,7 @@ const education: EducationType[] = [
 		institution: "Luxor Institute of Technology",
 		location: "Egypt",
 		start_time: "12/2024",
-		end_time: "Present",
+		end_time: "12/2025",
 	},
 ];
 ---
@@ -130,28 +172,28 @@ const education: EducationType[] = [
 			<!-- Header -->
 			<header class="mb-4 sm:mb-6 print:mb-3 break-inside-avoid">
 				<h1 class="text-3xl sm:text-4xl md:text-5xl uppercase font-bold text-center mb-3 sm:mb-4 print:text-2xl print:mb-2">
-					Abdelrahman Abdelfattah
+					{profile.name}
 				</h1>
 				<div class="flex flex-wrap gap-3 sm:gap-4 justify-center text-gray-700 text-xs sm:text-sm print:gap-2 print:text-black max-sm:flex-col max-sm:items-center">
-					<a href="mailto:spices.digital@gmail.com" class="flex gap-1 items-center hover:text-gray-900 print:no-underline">
+					<a href={`mailto:${contact.email}`} class="flex gap-1 items-center hover:text-gray-900 print:no-underline">
 						<Mail size={16} />
-						<span>spices.digital@gmail.com</span>
+						<span>{contact.email}</span>
 					</a>
 					<span class="flex gap-1 items-center">
 						<Phone size={16} />
-						<span>(+20) 01212519816</span>
+						<span>{contact.phone}</span>
 					</span>
 					<span class="flex gap-1 items-center">
 						<MapPin size={16} />
-						<span>Qena, Egypt</span>
+						<span>{contact.location}</span>
 					</span>
-					<a class="flex gap-1 items-center hover:text-gray-900 print:no-underline" href="https://www.linkedin.com/in/abdo-spices/" target="_blank" rel="noopener noreferrer">
+					<a class="flex gap-1 items-center hover:text-gray-900 print:no-underline" href={`https://www.${contact.linkedin}/`} target="_blank" rel="noopener noreferrer">
 						<Linkedin size={16} />
-						<span>linkedin.com/in/abdo-spices</span>
+						<span>{contact.linkedin}</span>
 					</a>
-					<a class="flex gap-1 items-center hover:text-gray-900 print:no-underline" href="https://www.github.com/abdo-spices/" target="_blank" rel="noopener noreferrer">
+					<a class="flex gap-1 items-center hover:text-gray-900 print:no-underline" href={`https://www.${contact.github}/`} target="_blank" rel="noopener noreferrer">
 						<Github size={16} />
-						<span>github.com/abdo-spices</span>
+						<span>{contact.github}</span>
 					</a>
 				</div>
 			</header>
@@ -162,10 +204,7 @@ const education: EducationType[] = [
 					Professional Summary
 				</h2>
 				<p class="text-gray-700 leading-relaxed text-sm sm:text-base print:text-[11pt] print:leading-snug">
-					Front-End Software Engineer with a strong focus on building fast, accessible, and SEO-optimized web experiences. 
-					Experienced in React, Next.js, and Astro with a passion for UI/UX design and performance engineering. 
-					Actively contributing to the open-source community through projects like Wathqny, Fruit UI, and contributions to Astro and roadmap.sh. 
-					Dedicated to crafting efficient, maintainable, and user-centered interfaces that scale.
+					{profile.summary}
 				</p>
 			</section>
 
@@ -211,13 +250,23 @@ const education: EducationType[] = [
 				</h2>
 				<div class="grid gap-1.5 sm:gap-2 print:gap-1">
 					{
-						Object.entries(skills).map(([category, skillList]) => (
+						Object.entries(skills.technical).map(([category, skillList]) => (
 							<div class="flex flex-col sm:flex-row gap-1 sm:gap-2">
 								<span class="font-medium text-gray-800 text-xs sm:text-sm min-w-fit print:text-[10pt]">{category}:</span>
 								<span class="text-gray-700 text-xs sm:text-sm print:text-[10pt]">{skillList.join(", ")}</span>
 							</div>
 						))
 					}
+				</div>
+			</section>
+
+			<!-- Soft Skills -->
+			<section class="mb-3 sm:mb-4 print:mb-3 break-inside-avoid">
+				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+					Soft Skills
+				</h2>
+				<div class="text-gray-700 text-xs sm:text-sm print:text-[10pt]">
+					{skills.soft.join(" • ")}
 				</div>
 			</section>
 
