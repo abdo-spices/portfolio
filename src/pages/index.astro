@@ -45,10 +45,10 @@ type SkillsType = {
 	};
 	soft: string[];
 };
-
 const profile: ProfileType = {
 	name: "Abdelrahman Abdelfattah",
-	summary: "Full-Stack Software Engineer with a strong focus on building fast, accessible, and SEO-optimized web experiences. Experienced in React, Next.js, and Astro with a passion for UI/UX design and performance engineering. Actively contributing to the open-source community through projects like Wathqny, Fruit UI, and contributions to Astro and roadmap.sh. Dedicated to crafting efficient, maintainable, and user-centered interfaces that scale."
+	summary:
+		"Software Engineer specializing in fast, accessible, and SEO-optimized web platforms. Skilled in React, Next.js, and Astro with a strong foundation in UI/UX design and performance engineering. Contributed to open-source projects including Wathqny, Fruit UI, and enhancements within the Astro and roadmap.sh ecosystems. Focused on building scalable, maintainable, and user-centered digital experiences that deliver measurable performance gains.",
 };
 
 const contact: ContactType = {
@@ -56,95 +56,106 @@ const contact: ContactType = {
 	phone: "(+20) 01212519816",
 	location: "Qena, Egypt",
 	linkedin: "linkedin.com/in/abdo-spices",
-	github: "github.com/abdo-spices"
+	github: "github.com/abdo-spices",
 };
 
 const jobs: JobType[] = [
-  {
-    job_title: "Software Engineer",
-    description: [
-      "Develop and maintain Wathqny — a blazing-fast documentation site generator with markdown support and an exceptional developer experience; optimized to deliver page loads in under 200 ms.",
-      "Created and maintain FruitUI — a modular, lightweight CSS framework that allows developers to include only the components they need, offering a highly customizable alternative to bulky systems like Bootstrap.",
-      "Optimized roadmap.sh, improving Lighthouse Performance Score from 83 → 99 (+16), reducing LCP by 1.4 s, FCP by 0.7 s, and achieving a perfect CLS of 0.00.",
-      "Collaborate with open-source communities such as Astro and Monkeytype — improving performance, accessibility, and developer tooling across multiple ecosystems.",
-      "Continuously refine build pipelines, rendering performance, and developer experience across several open-source projects."
-    ],
+	{
+		job_title: "Software Engineer",
+		description: [
+			"Developed and maintained Wathqny — a high-performance documentation generator with markdown support, delivering sub-200 ms page loads and seamless navigation.",
+			"Built and maintained FruitUI — a modular, lightweight CSS framework enabling developers to import only required components, providing a customizable alternative to bulky systems like Bootstrap.",
+			"Enhanced roadmap.sh performance, raising the Lighthouse Score from 83 → 99 (+16), cutting Largest Contentful Paint by 1.4 s and First Contentful Paint by 0.7 s, and achieving a perfect CLS of 0.00.",
+			"Collaborated with open-source communities such as Astro and Monkeytype to advance performance, accessibility, and developer tooling across multiple ecosystems.",
+			"Optimized build pipelines, rendering processes, and developer experience for multiple active open-source projects.",
+		],
 		start_time: "09/2023",
 		end_time: "Present",
-    location: "Remote",
-    company_name: "Open Source (Self-Employed)"
-  },
-  {
-    job_title: "Software Engineer",
-    description: [
-      "Reduced memory usage from 16 GB to 700 MB (~23× improvement), significantly enhancing system performance.",
-      "Accelerated developer environment load time from 3–5 minutes to ~10 seconds, greatly improving productivity.",
-      "Developed internal tools and implemented system-level optimizations to streamline development workflows."
-    ],
+		location: "Remote",
+		company_name: "Open Source (Self-Employed)",
+	},
+	{
+		job_title: "Software Engineer",
+		description: [
+			"Reduced memory consumption from 16 GB to 700 MB (~23× improvement), significantly enhancing application stability and efficiency.",
+			"Accelerated environment initialization from 3–5 minutes to ~10 seconds, substantially improving developer productivity.",
+			"Engineered internal utilities and implemented system-level optimizations to streamline development workflows and runtime performance.",
+		],
 		start_time: "01/2025",
 		end_time: "07/2025",
-    location: "Remote",
-    company_name: "Gentleduck"
-  },
-  {
-    job_title: "Junior Frontend Developer",
-    description: [
-      "Developed React-based dashboards and interfaces, improving usability and engagement.",
-      "Integrated REST APIs to support dynamic data handling and real-time updates.",
-      "Built reusable components tailored to project requirements while maintaining design consistency.",
-      "Optimized load times and overall app performance using best practices and tooling.",
-      "Collaborated on multiple systems totaling 2,000+ users, delivering scalable, maintainable solutions.",
-      "Handled the full development cycle — from initial setup to deployment and maintenance.",
-      "Provided ongoing freelance support and iterative improvements after the main development phase."
-    ],
+		location: "Remote",
+		company_name: "Gentleduck",
+	},
+	{
+		job_title: "Junior Frontend Developer",
+		description: [
+			"Built interactive React-based dashboards and data-driven interfaces, improving usability and engagement for 2,000+ users.",
+			"Integrated REST APIs to enable dynamic data flows and real-time updates across applications.",
+			"Developed reusable, scalable components ensuring design consistency and maintainability.",
+			"Applied advanced optimization techniques to reduce load times and improve overall app performance.",
+			"Delivered full lifecycle ownership — from environment setup to deployment and post-launch maintenance.",
+			"Provided continued freelance support and incremental feature enhancements after project delivery.",
+		],
 		start_time: "09/2023",
 		end_time: "02/2024",
-    location: "Remote / Iraq",
-    company_name: "Native Code IQ"
-  }
+		location: "Remote / Iraq",
+		company_name: "Native Code IQ",
+	},
 ];
 
 const projects: ProjectType[] = [
-  {
-    name: "Wathqny",
-    description: "A blazing-fast documentation site generator optimized for instant navigation and sub-200 ms page loads, featuring markdown support, instant rebuilds, and a developer-first experience.",
-    technologies: ["Astro", "TypeScript", "Vite"]
-  },
-  {
-    name: "FruitUI",
-    description: "A modular, lightweight CSS framework that lets developers include only the parts they need — from grids to navbars — providing a customizable, performance-focused alternative to Bootstrap.",
-    technologies: ["Vanilla CSS", "SASS", "TypeScript"]
-  },
-  {
-    name: "Gentleduck UI (Duck)",
-    description: "A modern, high-performance React component library — part of the Gentleduck suite — offering scalable primitives and flexible components built for speed, accessibility, and developer experience.",
-    technologies: ["React", "TypeScript", "CSS"]
-  }
+	{
+		name: "Wathqny",
+		description:
+			"A high-speed documentation generator delivering sub-200 ms navigation, instant rebuilds, and markdown support — optimized for an exceptional developer experience.",
+		technologies: ["Astro", "TypeScript", "Vite"],
+	},
+	{
+		name: "FruitUI",
+		description:
+			"A modular, lightweight CSS framework allowing granular imports — from grids to navigation — built for customization, speed, and minimal overhead.",
+		technologies: ["Vanilla CSS", "SASS", "TypeScript"],
+	},
+	{
+		name: "Gentleduck UI (Duck)",
+		description:
+			"A performance-focused React component library within the Gentleduck suite, offering scalable primitives and accessible, developer-friendly UI components.",
+		technologies: ["React", "TypeScript", "CSS"],
+	},
 ];
 
 const skills: SkillsType = {
 	technical: {
-		"Frontend": [
+		Frontend: [
 			"React",
 			"Next.js",
 			"TypeScript",
 			"JavaScript (ES6+)",
 			"HTML",
 			"CSS",
-			"Astro"
+			"Astro",
 		],
-		"Backend": ["Node.js", "Nest.js", "PostgreSQL"],
-		"Tools & Others": ["Git", "Vite", "Webpack", "REST APIs","CI/CD", "web accessibility", "performance optimization","SEO optimization"]
+		Backend: ["Node.js", "Nest.js", "PostgreSQL"],
+		"Tools & Others": [
+			"Git",
+			"Vite",
+			"Webpack",
+			"REST APIs",
+			"CI/CD",
+			"Web Accessibility",
+			"Performance Optimization",
+			"SEO Optimization",
+		],
 	},
 	soft: [
-		"Problem Solving",
-		"Communication",
-		"Team Collaboration",
+		"Analytical Problem Solving",
+		"Effective Communication",
+		"Cross-Functional Collaboration",
 		"Attention to Detail",
 		"Time Management",
 		"Adaptability",
-		"Self-Motivated"
-	]
+		"Self-Motivation",
+	],
 };
 
 const education: EducationType[] = [
@@ -163,19 +174,30 @@ const education: EducationType[] = [
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/jpg" href="/favicon.jpg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content="Abdelrahman Abdelfattah - UI Engineer Portfolio & CV" />
+		<meta
+			name="description"
+			content="Abdelrahman Abdelfattah - UI Engineer Portfolio & CV"
+		/>
 		<title>Abdelrahman Abdelfattah - CV</title>
-
 	</head>
 	<body class="bg-white print:text-[11pt] print:m-0 print:p-0 font-[arial]">
-		<div class="container mx-auto px-4 sm:px-8 py-6 sm:py-10 max-w-5xl print:max-w-full print:px-12 print:py-12">
+		<div
+			class="container mx-auto px-4 sm:px-8 py-6 sm:py-10 max-w-5xl print:max-w-full print:px-12 print:py-12"
+		>
 			<!-- Header -->
 			<header class="mb-4 sm:mb-6 print:mb-3 break-inside-avoid">
-				<h1 class="text-3xl sm:text-4xl md:text-5xl uppercase font-bold text-center mb-3 sm:mb-4 print:text-2xl print:mb-2">
+				<h1
+					class="text-3xl sm:text-4xl md:text-5xl uppercase font-bold text-center mb-3 sm:mb-4 print:text-2xl print:mb-2"
+				>
 					{profile.name}
 				</h1>
-				<div class="flex flex-wrap gap-3 sm:gap-4 justify-center text-gray-700 text-xs sm:text-sm print:gap-2 print:text-black max-sm:flex-col max-sm:items-center">
-					<a href={`mailto:${contact.email}`} class="flex gap-1 items-center hover:text-gray-900 print:no-underline">
+				<div
+					class="flex flex-wrap gap-3 sm:gap-4 justify-center text-gray-700 text-xs sm:text-sm print:gap-2 print:text-black max-sm:flex-col max-sm:items-center"
+				>
+					<a
+						href={`mailto:${contact.email}`}
+						class="flex gap-1 items-center hover:text-gray-900 print:no-underline"
+					>
 						<Mail size={16} />
 						<span>{contact.email}</span>
 					</a>
@@ -187,11 +209,21 @@ const education: EducationType[] = [
 						<MapPin size={16} />
 						<span>{contact.location}</span>
 					</span>
-					<a class="flex gap-1 items-center hover:text-gray-900 print:no-underline" href={`https://www.${contact.linkedin}/`} target="_blank" rel="noopener noreferrer">
+					<a
+						class="flex gap-1 items-center hover:text-gray-900 print:no-underline"
+						href={`https://www.${contact.linkedin}/`}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<Linkedin size={16} />
 						<span>{contact.linkedin}</span>
 					</a>
-					<a class="flex gap-1 items-center hover:text-gray-900 print:no-underline" href={`https://www.${contact.github}/`} target="_blank" rel="noopener noreferrer">
+					<a
+						class="flex gap-1 items-center hover:text-gray-900 print:no-underline"
+						href={`https://www.${contact.github}/`}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<Github size={16} />
 						<span>{contact.github}</span>
 					</a>
@@ -200,17 +232,23 @@ const education: EducationType[] = [
 
 			<!-- Summary -->
 			<section class="mb-3 sm:mb-4 print:mb-3 break-inside-avoid">
-				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+				<h2
+					class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid"
+				>
 					Professional Summary
 				</h2>
-				<p class="text-gray-700 leading-relaxed text-sm sm:text-base print:text-[11pt] print:leading-snug">
+				<p
+					class="text-gray-700 leading-relaxed text-sm sm:text-base print:text-[11pt] print:leading-snug"
+				>
 					{profile.summary}
 				</p>
 			</section>
 
 			<!-- Experience -->
 			<section class="mb-3 sm:mb-4 print:mb-3">
-				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+				<h2
+					class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid"
+				>
 					Professional Experience
 				</h2>
 				<div class="space-y-3 sm:space-y-4 print:space-y-2">
@@ -219,7 +257,9 @@ const education: EducationType[] = [
 							<div class="break-inside-avoid">
 								<div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 print:mb-1 max-sm:space-y-1">
 									<div>
-										<h3 class="text-base sm:text-lg font-semibold capitalize print:text-sm break-after-avoid">{job.job_title}</h3>
+										<h3 class="text-base sm:text-lg font-semibold capitalize print:text-sm break-after-avoid">
+											{job.job_title}
+										</h3>
 										<div class="text-xs sm:text-sm text-gray-600 print:text-[10pt]">
 											<span class="font-medium">{job.company_name}</span>
 											<span class="mx-1">•</span>
@@ -245,15 +285,21 @@ const education: EducationType[] = [
 
 			<!-- Skills -->
 			<section class="mb-3 sm:mb-4 print:mb-3 break-inside-avoid">
-				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+				<h2
+					class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid"
+				>
 					Technical Skills
 				</h2>
 				<div class="grid gap-1.5 sm:gap-2 print:gap-1">
 					{
 						Object.entries(skills.technical).map(([category, skillList]) => (
 							<div class="flex flex-col sm:flex-row gap-1 sm:gap-2">
-								<span class="font-medium text-gray-800 text-xs sm:text-sm min-w-fit print:text-[10pt]">{category}:</span>
-								<span class="text-gray-700 text-xs sm:text-sm print:text-[10pt]">{skillList.join(", ")}</span>
+								<span class="font-medium text-gray-800 text-xs sm:text-sm min-w-fit print:text-[10pt]">
+									{category}:
+								</span>
+								<span class="text-gray-700 text-xs sm:text-sm print:text-[10pt]">
+									{skillList.join(", ")}
+								</span>
 							</div>
 						))
 					}
@@ -262,7 +308,9 @@ const education: EducationType[] = [
 
 			<!-- Soft Skills -->
 			<section class="mb-3 sm:mb-4 print:mb-3 break-inside-avoid">
-				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+				<h2
+					class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid"
+				>
 					Soft Skills
 				</h2>
 				<div class="text-gray-700 text-xs sm:text-sm print:text-[10pt]">
@@ -272,15 +320,21 @@ const education: EducationType[] = [
 
 			<!-- Projects -->
 			<section class="mb-3 sm:mb-4 print:mb-3 break-inside-avoid">
-				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+				<h2
+					class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid"
+				>
 					Projects
 				</h2>
 				<div class="space-y-2 sm:space-y-3 print:space-y-2">
 					{
 						projects.map((project: ProjectType) => (
 							<div class="break-inside-avoid">
-								<h3 class="font-semibold text-gray-800 text-sm sm:text-base print:text-[11pt]">{project.name}</h3>
-								<p class="text-xs sm:text-sm text-gray-700 mb-1 print:text-[10pt] print:leading-snug">{project.description}</p>
+								<h3 class="font-semibold text-gray-800 text-sm sm:text-base print:text-[11pt]">
+									{project.name}
+								</h3>
+								<p class="text-xs sm:text-sm text-gray-700 mb-1 print:text-[10pt] print:leading-snug">
+									{project.description}
+								</p>
 								<div class="flex gap-1.5 sm:gap-2 flex-wrap print:gap-1">
 									{project.technologies.map((tech) => (
 										<span class="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 sm:py-1 rounded print:text-[9pt] print:py-0.5">
@@ -296,14 +350,18 @@ const education: EducationType[] = [
 
 			<!-- Education -->
 			<section class="break-inside-avoid">
-				<h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid">
+				<h2
+					class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid"
+				>
 					Education
 				</h2>
 				{
 					education.map((edu: EducationType) => (
 						<div class="flex flex-col sm:flex-row sm:justify-between sm:items-start">
 							<div>
-								<h3 class="font-semibold text-gray-800 text-sm sm:text-base print:text-[11pt]">{edu.degree}</h3>
+								<h3 class="font-semibold text-gray-800 text-sm sm:text-base print:text-[11pt]">
+									{edu.degree}
+								</h3>
 								<p class="text-xs sm:text-sm text-gray-600 print:text-[10pt]">
 									{edu.institution} • {edu.location}
 								</p>
