@@ -48,12 +48,12 @@ type SkillsType = {
 const profile: ProfileType = {
 	name: "Abdelrahman Abdelfattah",
 	summary:
-		"Software Engineer specializing in fast, accessible, and SEO-optimized web platforms. Skilled in React, Next.js, and Astro with a strong foundation in UI/UX design, performance engineering, and frontend system design. Experienced in software architecture, code review, and Agile methodologies. Contributed to open-source projects including Wathqny, Fruit UI, and enhancements within the Astro and roadmap.sh ecosystems. Focused on building scalable, maintainable, and user-centered digital experiences that deliver measurable performance gains.",
+		"Software Engineer specializing in fast, accessible, and SEO-optimized web platforms. Skilled in React, Next.js, and Astro with a strong foundation in UI/UX design, performance engineering, and frontend system design. Experienced in software architecture, code review, Agile methodologies, and full-cycle software development.",
 };
 
 const contact: ContactType = {
 	email: "spices.digital@gmail.com",
-	phone: "(+20) 01212519816",
+	phone: "(+20)01212519816",
 	location: "Qena, Egypt",
 	linkedin: "linkedin.com/in/abdo-spices",
 	github: "github.com/abdo-spices",
@@ -63,12 +63,12 @@ const jobs: JobType[] = [
 	{
 		job_title: "Software Engineer",
 		description: [
-			"Developed and maintained Wathqny — a high-performance documentation generator with markdown support, delivering sub-200 ms page loads and seamless navigation.",
-			"Built and maintained FruitUI — a modular, lightweight CSS framework enabling developers to import only required components, providing a customizable alternative to bulky systems like Bootstrap.",
-			"Enhanced roadmap.sh performance, raising the Lighthouse Score from 83 → 99 (+16), cutting Largest Contentful Paint by 1.4 s and First Contentful Paint by 0.7 s, and achieving a perfect CLS of 0.00.",
-			"Collaborated with open-source communities such as Astro and Monkeytype to advance performance, accessibility, and developer tooling across multiple ecosystems.",
-			"Optimized build pipelines, rendering processes, and developer experience for multiple active open-source projects.",
-			"Performed regular code reviews and contributed to architectural discussions to ensure scalable and maintainable frontend systems.",
+			"Engineered Wathqny — a high-performance documentation generator achieving sub-200 ms load",
+			"Developed FruitUI — a modular, lightweight CSS framework that reduced CSS payloads by ~70%, improving page load efficiency and developer flexibility.",
+			"Boosted roadmap.sh performance, improving Lighthouse Score by +19%, reducing Largest Contentful Paint by 64%, and decreasing First Contentful Paint by 54%.",
+			"Collaborated with open-source ecosystems (Astro, Monkeytype) to advance accessibility, developer tooling, and performance across frameworks.",
+			"Optimized build pipelines, cutting rebuild times by ~40% and streamlining CI processes for faster developer feedback.",
+			"Led code reviews and contributed to frontend architecture decisions to ensure scalable, maintainable implementations.",
 		],
 		start_time: "09/2023",
 		end_time: "Present",
@@ -78,12 +78,12 @@ const jobs: JobType[] = [
 	{
 		job_title: "Software Engineer",
 		description: [
-			"Reduced memory consumption from 16 GB to 700 MB (~23× improvement), significantly enhancing application stability and efficiency.",
-			"Accelerated environment initialization from 3–5 minutes to ~10 seconds, substantially improving developer productivity.",
-			"Engineered internal utilities and implemented system-level optimizations to streamline development workflows and runtime performance.",
-			"Worked within a monorepo architecture across multiple projects, improving dependency management and shared module consistency.",
-			"Collaborated in an Agile environment to plan, iterate, and deliver features efficiently, incorporating unit testing and debugging for reliability.",
-			"Contributed to system design decisions and project management processes to maintain clarity and delivery efficiency.",
+			"Reduced memory consumption from 16 GB to 700 MB (~95% reduction), drastically improving application stability and resource efficiency.",
+			"Accelerated environment initialization by ~97%, dropping setup time from 5 minutes to ~10 seconds and improving developer velocity.",
+			"Engineered internal utilities and implemented system-level optimizations to boost performance and streamline workflows.",
+			"Managed a monorepo architecture across multiple projects, improving dependency efficiency and shared module reuse by 80%.",
+			"Collaborated in an Agile environment, planning and delivering iterative features with a 100% sprint completion rate.",
+			"Contributed to system design and project management initiatives to maintain delivery consistency and cross-team clarity.",
 		],
 		start_time: "01/2025",
 		end_time: "07/2025",
@@ -93,12 +93,15 @@ const jobs: JobType[] = [
 	{
 		job_title: "Junior Frontend Developer",
 		description: [
-			"Built interactive React-based dashboards and data-driven interfaces, improving usability and engagement for 2,000+ users.",
-			"Integrated REST APIs to enable dynamic data flows and real-time updates across applications.",
-			"Developed reusable, scalable components ensuring design consistency and maintainability.",
-			"Applied advanced optimization techniques to reduce load times and improve overall app performance.",
-			"Delivered full lifecycle ownership — from environment setup to deployment and post-launch maintenance.",
-			"Provided continued freelance support and incremental feature enhancements after project delivery.",
+			"Developed and optimized React-based UIs, improving performance and user engagement across multiple enterprise systems.",
+			"Migrated projects from Webpack to Vite, cutting build times by over 90% (hours -> minutes) and boosting developer iteration speed tenfold.",
+			"Integrated REST APIs and WebSockets for real-time data synchronization and responsive user experiences.",
+			"Engineered a custom spreadsheet system with virtualization and batching, accelerating user workflows by 300% (hours -> minutes).",
+			"Built a real-time HR management system for 2,000+ employees, stabilizing it by resolving 70% of reported issues on day one.",
+			"Delivered a healthcare platform from scratch, reducing bundle size by 90% (1.5 MB -> 150 KB) and load time by 90% (10 s -> <1 s) while maintaining pixel-perfect, accessible design.",
+			"Conducted accessibility audits and performance profiling, achieving near-perfect Lighthouse and Core Web Vitals scores.",
+			"Reviewed PRs, mentored new engineers, and enforced code quality through CI/CD pipelines.",
+			"Managed deployments via Vercel and DigitalOcean, ensuring reliable delivery and production uptime.",
 		],
 		start_time: "09/2023",
 		end_time: "02/2024",
@@ -111,19 +114,19 @@ const projects: ProjectType[] = [
 	{
 		name: "Wathqny",
 		description:
-			"A high-speed documentation generator delivering sub-200 ms navigation, instant rebuilds, and markdown support — optimized for an exceptional developer experience.",
+			"Built a high-speed documentation site generator achieving sub-200 ms navigation, instant rebuilds, and 100% SEO Lighthouse scores for top-tier developer experience building technical documentation.",
 		technologies: ["Astro", "TypeScript", "Vite"],
 	},
 	{
 		name: "FruitUI",
 		description:
-			"A modular, lightweight CSS framework allowing granular imports — from grids to navigation — built for customization, speed, and minimal overhead.",
+			"Developed a modular CSS framework reducing stylesheet size by ~70%, improving load times and offering flexible, granular imports.",
 		technologies: ["Vanilla CSS", "SASS", "TypeScript"],
 	},
 	{
 		name: "Gentleduck UI (Duck)",
 		description:
-			"A performance-focused React component library within the Gentleduck suite, offering scalable primitives and accessible, developer-friendly UI components.",
+			"Created a performance-focused React component library improving render efficiency by ~80·%, offering scalable, accessible primitives for enterprise use.",
 		technologies: ["React", "TypeScript", "CSS"],
 	},
 ];
@@ -145,17 +148,20 @@ const skills: SkillsType = {
 			"Git",
 			"Vite",
 			"Webpack",
-			"Monorepo Management",
+			"monorepo",
 			"REST APIs",
-			"API Development",
+			"API development",
+			"web development",
+			"software development",
 			"CI/CD",
-			"Web Accessibility",
-			"Performance Optimization",
-			"SEO Optimization",
+			"web accessibility",
+			"performance optimization",
+			"SEO optimization",
 			"Software Architecture",
-			"Unit Testing",
-			"Debugging",
-			"Code Review",
+			"unit testing",
+			"debugging",
+			"code review",
+			"Agile Development",
 			"Project Management",
 		],
 	},
@@ -169,6 +175,7 @@ const skills: SkillsType = {
 		"Self-Motivation",
 	],
 };
+
 
 const education: EducationType[] = [
 	{
