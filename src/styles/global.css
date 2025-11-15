@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@page {
+  padding: 0;
+  margin: 0;
+}
