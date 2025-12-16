@@ -10,14 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
+    "@astrojs/check": "0.9.6-alpha.0",
     "@lucide/astro": "^0.545.0",
-    "@tailwindcss/vite": "^4.1.3",
+    "@tailwindcss/vite": "^4.1.18",
     "@zokki/astro-minify": "^1.1.0",
-    "astro": "^5.14.4",
-    "astro-compressor": "^0.4.1",
-    "tailwindcss": "^4.1.3",
-    "typescript": "^5.8.2"
+    "astro": "6.0.0-alpha.1",
+    "astro-compressor": "^1.2.0",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.5"
