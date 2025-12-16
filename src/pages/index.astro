@@ -185,10 +185,20 @@ const skills: SkillsType = {
 };
 
 const certifications: CertificationType[] = [
+		{
+		name: "McKinsey.org Forward Program",
+		issuer: "McKinsey & Company",
+		date: "12/2025",
+	},
 	{
 		name: "Google Project Management",
-		issuer: "coursera",
+		issuer: "google",
 		date: "11/2025",
+	},
+		{
+		name: "Google UX design",
+		issuer: "google",
+		date: "12/2025",
 	},
 ];
 
@@ -362,7 +372,7 @@ const education: EducationType[] = [
 				<div class="space-y-2 sm:space-y-3 print:space-y-2">
 					{
 						projects.map((project: ProjectType) => (
-							<div class="break-inside-avoid">
+							<div class="break-inside-avoid-page">
 								<h3 class="font-semibold text-gray-800 text-sm sm:text-base print:text-[11pt]">
 									{project.name}
 								</h3>
