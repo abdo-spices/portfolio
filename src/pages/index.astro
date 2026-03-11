@@ -60,9 +60,9 @@ const profile: ProfileType = {
 };
 
 const contact: ContactType = {
-	email: "spices.digital@gmail.com",
+	email: "abdelrahman.spices@gmail.com",
 	phone: "(+20)01212519816",
-	location: "Qena, Egypt",
+	location: "Cairo, Egypt",
 	linkedin: "linkedin.com/in/abdo-spices",
 	github: "github.com/abdo-spices",
 };
@@ -76,7 +76,7 @@ const jobs: JobType[] = [
 			"Boosted roadmap.sh performance, improving Lighthouse Score by +19%, reducing Largest Contentful Paint by 64%, and decreasing First Contentful Paint by 54%.",
 			"Collaborated with open-source ecosystems (Astro, Monkeytype) to advance accessibility, developer tooling, and performance across frameworks.",
 			"Optimized build pipelines, cutting rebuild times by ~40% and streamlining CI processes for faster developer feedback.",
-			"Led code reviews and contributed to frontend architecture decisions to ensure scalable, maintainable implementations.",
+			// "Led code reviews and contributed to frontend architecture decisions to ensure scalable, maintainable implementations.",
 		],
 		start_time: "09/2023",
 		end_time: "Present",
@@ -107,7 +107,7 @@ const jobs: JobType[] = [
 			"Built a real-time HR management system for 2,000+ employees, stabilizing it by resolving 70% of reported issues on day one.",
 			"Delivered a healthcare platform from scratch, reducing bundle size by 90% (1.5 MB -> 150 KB) and load time by 90% (10 s -> <1 s) while maintaining pixel-perfect, accessible design.",
 			"Conducted accessibility audits and performance profiling, achieving near-perfect Lighthouse and Core Web Vitals scores.",
-			"Reviewed PRs, mentored new engineers, and enforced code quality through CI/CD pipelines.",
+			// "Reviewed PRs, mentored new engineers, and enforced code quality through CI/CD pipelines.",
 			"Managed deployments via Vercel and DigitalOcean, ensuring reliable delivery and production uptime.",
 		],
 		start_time: "09/2023",
@@ -224,19 +224,19 @@ const education: EducationType[] = [
 		/>
 		<title>{`${profile.name}`+`_Resume`}</title>
 	</head>
-	<body class="bg-white print:text-[11pt] print:m-0 print:p-0 font-[arial]">
+	<body class="bg-white print:text-[10pt] print:m-0 print:p-0 font-[arial]">
 		<div
-			class="container mx-auto px-4 sm:px-8 py-6 sm:py-10 max-w-5xl print:max-w-full print:px-12 print:py-12"
+			class="container mx-auto px-4 sm:px-8 py-6 sm:py-10 max-w-5xl"
 		>
 			<!-- Header -->
-			<header class="mb-4 sm:mb-6 print:mb-3 break-inside-avoid">
+			<header class="mb-4 sm:mb-6 print:mb-3">
 				<h1
-					class="text-3xl sm:text-4xl md:text-5xl uppercase font-bold text-center mb-3 sm:mb-4 print:text-2xl print:mb-2"
+					class="text-3xl sm:text-4xl md:text-5xl uppercase font-bold text-center mb-3 sm:mb-4 print:text-lg print:mb-2"
 				>
 					{profile.name}
 				</h1>
 				<div
-					class="flex flex-wrap gap-3 sm:gap-4 justify-center text-gray-700 text-xs sm:text-sm print:gap-2 print:text-black max-sm:flex-col max-sm:items-center"
+					class="flex flex-wrap gap-3 sm:gap-4 justify-center text-gray-700 text-xs sm:text-sm print:gap-2 print:text-[10pt] max-sm:flex-col max-sm:items-center"
 				>
 					<a
 						href={`mailto:${contact.email}`}
@@ -298,8 +298,8 @@ const education: EducationType[] = [
 				<div class="space-y-3 sm:space-y-4 print:space-y-2">
 					{
 						jobs.map((job: JobType) => (
-							<div class="break-inside-avoid">
-								<div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 print:mb-1 max-sm:space-y-1">
+							<div class="break-inside-avoid-page">
+								<div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 print:mb-1 max-sm:space-y-1 break-inside-avoid">
 									<div>
 										<h3 class="text-base sm:text-lg font-semibold capitalize print:text-sm break-after-avoid">
 											{job.job_title}
@@ -328,7 +328,7 @@ const education: EducationType[] = [
 			</section>
 
 			<!-- Skills -->
-			<section class="mb-3 sm:mb-4 print:mb-3 break-inside-avoid">
+			<section class="mb-3 sm:mb-4 print:mb-3">
 				<h2
 					class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid"
 				>
@@ -362,7 +362,7 @@ const education: EducationType[] = [
 				</div>
 			</section>
 
-			<!-- Projects -->
+			<!-- Projects
 			<section class="mb-3 sm:mb-4 print:mb-3 break-inside-avoid">
 				<h2
 					class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 border-b-2 border-gray-300 pb-1 print:text-base print:mb-2 break-after-avoid"
@@ -390,7 +390,7 @@ const education: EducationType[] = [
 						))
 					}
 				</div>
-			</section>
+			</section> -->
 
 			<!-- Certifications and Training -->
 			<section class="mb-3 sm:mb-4 print:mb-3 break-inside-avoid">
